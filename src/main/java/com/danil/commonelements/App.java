@@ -3,13 +3,16 @@ package com.danil.commonelements;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-import java.util.TreeSet;
+// import java.util.TreeSet;
 
 public class App {
     private static Collection<Integer> common(Collection<Integer> a, Collection<Integer> b) {
-        TreeSet<Integer> result = new TreeSet<>(a);
+        // TreeSet<Integer> result = new TreeSet<>(a);
+        List<Integer> result = new ArrayList<>(a);
         result.retainAll(b);
+        Collections.sort(result);
         return result;
     }
 
